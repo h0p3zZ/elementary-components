@@ -1,6 +1,9 @@
 # Elementary Component Library
 > For more information on Elementary click [here](https://github.com/sliemeobn/elementary)
 
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fh0p3zZ%2Felementary-components%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/h0p3zZ/elementary-components)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fh0p3zZ%2Felementary-components%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/h0p3zZ/elementary-components)
+
 **Combines component libraries for HTML rendering in Swift**
 
 [Libraries](#libraries) | [Motivation](#motivation) | [Discussion](https://github.com/h0p3zZ/elementary-components/discussions)

@@ -11,7 +11,7 @@ public typealias SLButton<Content: HTML> = HTMLElement<HTMLTag.SLButton, Content
 
 // Component under construction - not all attributes are implemented
 public extension HTMLAttribute where Tag == HTMLTag.SLButton {
-    enum Variant: String {
+    enum ButtonVariant: String {
         case `default`
         case primary
         case success
@@ -21,7 +21,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLButton {
         case text
     }
 
-    static func variant(_ variant: Variant) -> Self {
+    static func variant(_ variant: ButtonVariant) -> Self {
         HTMLAttribute(name: "variant", value: variant.rawValue)
     }
 

@@ -50,6 +50,16 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.form {
     }
 }
 
+public extension HTMLTrait.Attributes.shoelace {
+    protocol play {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.play {
+    static func play(_ play: Bool) -> Self {
+        .init(name: "play", value: String(play))
+    }
+}
+
 // TODO: upstream to Elementary
 extension HTMLTrait.Attributes {
     protocol value {}
