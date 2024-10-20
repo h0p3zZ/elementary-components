@@ -55,6 +55,9 @@ public extension HTMLTrait.Attributes.shoelace {
 }
 
 public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.play {
+    /// Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when the animation finishes or gets canceled. Default `false`.
+    /// - Parameter play: Whether the animation should play
+    /// - Returns: The HTMLAttribute
     static func play(_ play: Bool) -> Self {
         .init(name: "play", value: String(play))
     }

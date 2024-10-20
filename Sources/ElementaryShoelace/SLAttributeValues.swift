@@ -13,6 +13,9 @@ public extension HTMLAttributeValue {
         #DefineEvent(eventName: "slAfterHide")
         #DefineEvent(eventName: "slLoad")
         #DefineEvent(eventName: "slError")
+        #DefineEvent(eventName: "slCancel")
+        #DefineEvent(eventName: "slFinish")
+        #DefineEvent(eventName: "slStart")
     }
 }
 
@@ -33,6 +36,15 @@ extension HTMLAttributeValue.ShoelaceEvent.slLoad {
 }
 extension HTMLAttributeValue.ShoelaceEvent.slError {
     public static var slError: T { .init(rawValue: "sl-error")! }
+}
+extension HTMLAttributeValue.ShoelaceEvent.slCancel {
+    public static var slCancel: T { .init(rawValue: "sl-cancel")! }
+}
+extension HTMLAttributeValue.ShoelaceEvent.slFinish {
+    public static var slFinish: T { .init(rawValue: "sl-finish")! }
+}
+extension HTMLAttributeValue.ShoelaceEvent.slStart {
+    public static var slStart: T { .init(rawValue: "sl-start")! }
 }
 
 
