@@ -2,9 +2,8 @@ import Elementary
 import Foundation
 
 public extension HTMLTag {
-    enum SLInput: HTMLTrait.Paired {
+    enum SLInput: HTMLTrait.Shoelace {
         public static let name = "sl-input"
-        public static let _rendersInline = false // why is this needed?
     }
 }
 

@@ -1,7 +1,7 @@
 import Elementary
 
 public extension HTMLTag {
-    enum SLAnimatedImage: HTMLTrait.Paired {
+    enum SLAnimatedImage: HTMLTrait.Shoelace {
         public static let name = "sl-animated-image"
     }
 }

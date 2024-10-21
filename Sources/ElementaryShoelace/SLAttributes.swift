@@ -1,5 +1,15 @@
 import Elementary
 
+public extension HTMLTrait {
+    protocol Shoelace: Paired { }
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Shoelace {
+    static func slot(_ slot: String) -> Self {
+        HTMLAttribute(name: "slot", value: slot)
+    }
+}
+
 public extension HTMLTrait.Attributes {
     enum shoelace {}
 }

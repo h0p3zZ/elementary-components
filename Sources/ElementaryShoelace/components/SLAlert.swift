@@ -1,7 +1,7 @@
 import Elementary
 
 public extension HTMLTag {
-    enum SLAlert: HTMLTrait.Paired {
+    enum SLAlert: HTMLTrait.Shoelace {
         public static let name = "sl-alert"
     }
 }

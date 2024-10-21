@@ -1,9 +1,8 @@
 import Elementary
 
 public extension HTMLTag {
-    enum SLButton: HTMLTrait.Paired {
+    enum SLButton: HTMLTrait.Shoelace {
         public static let name = "sl-button"
-        public static let _rendersInline = false // why is this needed?
     }
 }
 
