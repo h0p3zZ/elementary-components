@@ -41,17 +41,3 @@ public extension HTMLAttribute where Tag == HTMLTag.SLAlert {
         case none
     }
 }
-
-// Events
-public extension HTMLAttributeValue.ShoelaceEvent {
-     struct Alert: HTMLEventName, slShow, slAfterShow, slHide, slAfterHide {
-        public var rawValue: String
-        public init(rawValue: String) {
-            self.rawValue = rawValue
-        }
-    }
-}
-
-public extension HTMLAttribute where Tag == HTMLTag.SLAlert {
-    static func on(_ event: HTMLAttributeValue.ShoelaceEvent.Alert, _ script: String) -> HTMLAttribute { .init(on: event, script: script) }
-}

@@ -251,17 +251,3 @@ public extension HTMLAttribute where Tag == HTMLTag.SLAnimation {
 }
 
 extension HTMLTag.SLAnimation: HTMLTrait.Attributes.shoelace.play {}
-
-// Events
-public extension HTMLAttributeValue.ShoelaceEvent {
-     struct Animation: HTMLEventName, slCancel, slFinish, slStart {
-        public var rawValue: String
-        public init(rawValue: String) {
-            self.rawValue = rawValue
-        }
-    }
-}
-
-public extension HTMLAttribute where Tag == HTMLTag.SLAnimation {
-    static func on(_ event: HTMLAttributeValue.ShoelaceEvent.Animation, _ script: String) -> HTMLAttribute { .init(on: event, script: script) }
-}
