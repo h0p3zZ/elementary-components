@@ -1,11 +1,5 @@
 import Elementary
 
-public extension HTMLAttribute where Tag: HTMLTrait.Attributes.Global {
-    static func on(_ event: HTMLAttributeValue.ShoelaceEvent, _ script: String) -> Self { .init(on: event, script: script) }
-}
-
-// TODO: window events, drag events, media events (more scoped)
-
 public extension HTMLAttributeValue {
     struct ShoelaceEvent: HTMLEventName {
         public var rawValue: String

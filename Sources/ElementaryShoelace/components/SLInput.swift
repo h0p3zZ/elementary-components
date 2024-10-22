@@ -79,7 +79,7 @@ extension HTMLTag.SLInput: HTMLTrait.Attributes.autocapitalize {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.autocorrect {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.autocomplete {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.autofocus {}
+extension HTMLTag.SLInput: HTMLTrait.Attributes.form {}
 
 extension HTMLTag.SLInput: HTMLTrait.Attributes.shoelace.size {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.shoelace.pill {}
-extension HTMLTag.SLInput: HTMLTrait.Attributes.shoelace.form {}
