@@ -25,6 +25,9 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.size {
         case large
     }
 
+    /// Sets the size of the shoelace component. Default `medium`.
+    /// - Parameter size: The size of the component (`small`, `medium`, `large`).
+    /// - Returns: The HTMLAttribute (`size="(value)"`)
     static func size(_ size: Size) -> Self {
         HTMLAttribute(name: "size", value: size.rawValue)
     }
@@ -35,6 +38,7 @@ public extension HTMLTrait.Attributes.shoelace {
 }
 
 public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.pill {
+    /// Makes the component pill style. Default `false`.
     static var pill: Self {
         HTMLAttribute(name: "pilled", value: nil)
     }
@@ -45,6 +49,9 @@ public extension HTMLTrait.Attributes.shoelace {
 }
 
 public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.defaultValue {
+    /// Sets the default value of the component. Primarily used for resetting the form control. Default `''`.
+    /// - Parameter value: The default value of the component
+    /// - Returns: The HTMLAttribute (`defaultValue="(value)"`)
     static func defaultValue(_ value: String) -> Self {
         HTMLAttribute(name: "defaultValue", value: value)
     }
@@ -55,6 +62,9 @@ public extension HTMLTrait.Attributes.shoelace {
 }
 
 public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.form {
+    /// By default, form controls are associated with the nearest containing <form> element. This attribute allows you to place the form control outside of a form and associate it with the form that has this id. The form must be in the same document or shadow root for this to work. Default `''`.
+    /// - Parameter value: The id of the form to associate the component with.
+    /// - Returns: The HTMLAttribute (`form="(value)"`)
     static func form(_ value: String) -> Self {
         HTMLAttribute(name: "form", value: value)
     }
@@ -64,6 +74,7 @@ public extension HTMLTrait.Attributes.shoelace {
     protocol play {}
 }
 
+// TODO: check if the description is correct (whether all components that implement it are animations)
 public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.play {
     /// Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when the animation finishes or gets canceled. Default `false`.
     /// - Parameter play: Whether the animation should play

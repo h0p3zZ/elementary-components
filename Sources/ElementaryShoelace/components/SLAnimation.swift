@@ -8,7 +8,7 @@ public extension HTMLTag {
 
 public typealias SLAnimation<Content: HTML> = HTMLElement<HTMLTag.SLAnimation, Content>
 
-// Should contain all the attributes defined on shoelaces SLInput component
+// Should contain all the attributes defined on shoelaces SLAnimation component
 // - that can be rendered on the server side and are not only getters
 public extension HTMLAttribute where Tag == HTMLTag.SLAnimation {
     enum SLAnimationName: String {
