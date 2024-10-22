@@ -13,23 +13,12 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/sliemeobn/elementary.git", from: "0.4.1"),
-        .package(url: "https://github.com/apple/swift-syntax.git", from: "600.0.1"),
     ],
     targets: [
         .target(
             name: "ElementaryShoelace",
             dependencies: [
                 .product(name: "Elementary", package: "elementary"),
-                "Macros",
-            ]
-        ),
-        .macro(
-            name: "Macros",
-            dependencies: [
-                .product(name: "SwiftCompilerPlugin", package: "swift-syntax"),
-                .product(name: "SwiftSyntax", package: "swift-syntax"),
-                .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
-                .product(name: "SwiftDiagnostics", package: "swift-syntax"),
             ]
         ),
         .testTarget(
