@@ -10,6 +10,16 @@ public extension HTMLAttribute where Tag: HTMLTrait.Shoelace {
     }
 }
 
+// TODO: find better spot for this
+public extension HTMLAttribute where Tag: HTMLTrait.Shoelace {
+    static func `class`(part: String, _ tailwind: String) -> Self {
+        let tailwind = tailwind.split(separator: " ").map { s in
+            "[&::part(\(part))]:\(s)"
+        }.joined(separator: " ")
+        return HTMLAttribute(name: "tailwind", value: tailwind, mergedBy: .appending(seperatedBy: " "))
+    }
+}
+
 public extension HTMLTrait.Attributes {
     enum shoelace {}
 }
