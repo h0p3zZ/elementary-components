@@ -23,12 +23,6 @@ public extension HTMLAttribute where Tag == HTMLTag.SLSelect {
         HTMLAttribute(name: "max-options-visible", value: String(count))
     }
 
-    /// Enable this option to prevent the listbox from being clipped when the component is placed inside a container with overflow: auto|scroll. Hoisting uses a fixed positioning strategy that works in many, but not all, scenarios. Default `false`.
-    /// - Returns: The HTMLAttribute (`hoist`)
-    static var hoist: Self {
-        HTMLAttribute(name: "hoist", value: nil)
-    }
-
     enum SLSelectPlacementValue: String {
         case bottom
         case top
@@ -50,6 +44,7 @@ extension HTMLTag.SLSelect: HTMLTrait.Attributes.placeholder {}
 extension HTMLTag.SLSelect: HTMLTrait.Attributes.disabled {}
 extension HTMLTag.SLSelect: HTMLTrait.Attributes.shoelace.clearable {}
 extension HTMLTag.SLSelect: HTMLTrait.Attributes.shoelace.open {}
+extension HTMLTag.SLSelect: HTMLTrait.Attributes.shoelace.hoist {}
 extension HTMLTag.SLSelect: HTMLTrait.Attributes.shoelace.filled {}
 extension HTMLTag.SLSelect: HTMLTrait.Attributes.shoelace.pill {}
 extension HTMLTag.SLSelect: HTMLTrait.Attributes.label {}

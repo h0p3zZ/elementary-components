@@ -113,6 +113,18 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.defaultV
 }
 
 public extension HTMLTrait.Attributes.shoelace {
+    protocol hoist {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.hoist {
+    /// Hoists the component to the body to avoid z-index issues. Default `false`.
+    /// - Returns: The HTMLAttribute (`hoist`)
+    static var hoist: Self {
+        HTMLAttribute(name: "hoist", value: nil)
+    }
+}
+
+public extension HTMLTrait.Attributes.shoelace {
     protocol play {}
 }
 
