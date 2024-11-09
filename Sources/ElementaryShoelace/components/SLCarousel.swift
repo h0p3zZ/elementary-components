@@ -1,16 +1,17 @@
 import Elementary
 
 public extension HTMLTag {
-    enum SlCarousel: HTMLTrait.Shoelace {
+    enum SLCarousel: HTMLTrait.Shoelace {
         public static let name = "sl-carousel"
     }
 }
 
-public typealias SlCarousel<Content: HTML> = HTMLElement<HTMLTag.SlCarousel, Content>
+public typealias SLCarousel<Content: HTML> = HTMLElement<HTMLTag.SLCarousel, Content>
 
-// Should contain all the attributes defined on shoelaces SlCarousel component
+// Should contain all the attributes defined on Shoelace's SLCarousel component
 // - that can be rendered on the server side and are not only getters
-public extension HTMLAttribute where Tag == HTMLTag.SlCarousel {
+// - for further info see https://shoelace.style/components/carousel
+public extension HTMLAttribute where Tag == HTMLTag.SLCarousel {
     /// When set, allows the user to navigate the carousel in the same direction indefinitely. Default `false`.
     /// - Returns: The HTMLAttribute (`loop`)
     static var loop: Self {

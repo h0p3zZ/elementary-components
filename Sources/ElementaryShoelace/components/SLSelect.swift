@@ -8,8 +8,9 @@ public extension HTMLTag {
 
 public typealias SLSelect<Content: HTML> = HTMLElement<HTMLTag.SLSelect, Content>
 
-// Should contain all the attributes defined on shoelaces SLSelect component
+// Should contain all the attributes defined on Shoelace's SLSelect component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/select
 public extension HTMLAttribute where Tag == HTMLTag.SLSelect {
     /// Allows multiple selected options
     static var multiple: Self {

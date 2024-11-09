@@ -8,8 +8,9 @@ public extension HTMLTag {
 
 public typealias SLCheckbox<Content: HTML> = HTMLElement<HTMLTag.SLCheckbox, Content>
 
-// Should contain all the attributes defined on shoelaces SLCheckbox component
+// Should contain all the attributes defined on Shoelace's SLCheckbox component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/checkbox
 public extension HTMLAttribute where Tag == HTMLTag.SLCheckbox {
     /// Draws the checkbox in a checked state. Default `false`.
     /// - Returns: The HTMLAttribute (`checked`)

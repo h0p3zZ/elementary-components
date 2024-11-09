@@ -8,8 +8,9 @@ public extension HTMLTag {
 
 public typealias SLDetails<Content: HTML> = HTMLElement<HTMLTag.SLDetails, Content>
 
-// Should contain all the attributes defined on shoelaces SLDetails component
+// Should contain all the attributes defined on Shoelace's SLDetails component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/details
 public extension HTMLAttribute where Tag == HTMLTag.SLDetails {
     /// The summary to show in the header. If you need to display HTML, use the summary slot instead.
     /// - Parameter summary: The summary to show in the header.

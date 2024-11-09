@@ -8,8 +8,9 @@ public extension HTMLTag {
 
 public typealias SLBadge<Content: HTML> = HTMLElement<HTMLTag.SLBadge, Content>
 
-// Should contain all the attributes defined on shoelaces SLBadge component
+// Should contain all the attributes defined on Shoelace's SLBadge component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/badge
 public extension HTMLAttribute where Tag == HTMLTag.SLBadge {
     enum SLBadgeVariantValue: String {
         case primary

@@ -9,8 +9,9 @@ public extension HTMLTag {
 
 public typealias SLInput<Content: HTML> = HTMLElement<HTMLTag.SLInput, Content>
 
-// Should contain all the attributes defined on shoelaces SLInput component
+// Should contain all the attributes defined on Shoelace's SLInput component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/input
 public extension HTMLAttribute where Tag == HTMLTag.SLInput {
     static func placeholder(_ text: String) -> Self {
         HTMLAttribute(name: "placeholder", value: text)

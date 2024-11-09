@@ -8,8 +8,9 @@ public extension HTMLTag {
 
 public typealias SLAvatar<Content: HTML> = HTMLElement<HTMLTag.SLAvatar, Content>
 
-// Should contain all the attributes defined on shoelaces SLAvatar component
+// Should contain all the attributes defined on Shoelace's SLAvatar component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/avatar
 public extension HTMLAttribute where Tag == HTMLTag.SLAvatar {
     /// The image source to use for the avatar. Default `''`.
     /// - Parameter url: The url of the image.

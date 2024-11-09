@@ -12,7 +12,7 @@ public extension HTMLAttributeValue {
         public static var slHide: Self { .init(rawValue: "sl-hide") }
         public static var slAfterHide: Self { .init(rawValue: "sl-after-hide") }
         public static var slLoad: Self { .init(rawValue: "sl-load") }
-        public static var slError: Self { .init(rawValue: "sl-erorr") }
+        public static var slError: Self { .init(rawValue: "sl-error") }
         public static var slCancel: Self { .init(rawValue: "sl-cancel") }
         public static var slFinish: Self { .init(rawValue: "sl-finish") }
         public static var slStart: Self { .init(rawValue: "sl-start") }

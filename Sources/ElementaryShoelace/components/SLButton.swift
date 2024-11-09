@@ -8,8 +8,9 @@ public extension HTMLTag {
 
 public typealias SLButton<Content: HTML> = HTMLElement<HTMLTag.SLButton, Content>
 
-// Should contain all the attributes defined on shoelaces SlButton component
+// Should contain all the attributes defined on Shoelace's SlButton component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/button
 public extension HTMLAttribute where Tag == HTMLTag.SLButton {
     enum ButtonVariant: String {
         case `default`

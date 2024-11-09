@@ -8,8 +8,9 @@ public extension HTMLTag {
 
 public typealias SLCopyButton<Content: HTML> = HTMLElement<HTMLTag.SLCopyButton, Content>
 
-// Should contain all the attributes defined on shoelaces SLCopyButton component
+// Should contain all the attributes defined on Shoelace's SLCopyButton component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/copy-button
 public extension HTMLAttribute where Tag == HTMLTag.SLCopyButton {
     /// An id that references an element in the same document from which data will be copied. If both this and value are present, this value will take precedence. By default, the target element’s textContent will be copied. To copy an attribute, append the attribute name wrapped in square brackets, e.g. from="el[value]". To copy a property, append a dot and the property name, e.g. from="el.value". 
     /// - Parameter value: The element id to copy from.
@@ -39,7 +40,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLCopyButton {
         HTMLAttribute(name: "error-label", value: value)
     }
 
-    /// he length of time to show feedback before restoring the default trigger. Default `1000`.
+    /// The length of time to show feedback before restoring the default trigger. Default `1000`.
     /// - Parameter value: The length of time to show feedback before restoring the default trigger.
     /// - Returns: The HTMLAttribute (`feedback-duration="(value)"`)
     static func feedbackDuration(_ value: Int) -> Self {

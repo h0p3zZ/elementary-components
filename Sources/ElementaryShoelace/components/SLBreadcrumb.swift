@@ -8,6 +8,7 @@ public extension HTMLTag {
 
 public typealias SLBreadcrumb<Content: HTML> = HTMLElement<HTMLTag.SLBreadcrumb, Content>
 
-// Should contain all the attributes defined on shoelaces SLBreadcrumb component
+// Should contain all the attributes defined on Shoelace's SLBreadcrumb component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/breadcrumb
 extension HTMLTag.SLBreadcrumb: HTMLTrait.Attributes.label {}

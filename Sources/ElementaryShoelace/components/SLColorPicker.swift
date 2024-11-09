@@ -8,8 +8,9 @@ public extension HTMLTag {
 
 public typealias SLColorPicker<Content: HTML> = HTMLElement<HTMLTag.SLColorPicker, Content>
 
-// Should contain all the attributes defined on shoelaces SLColorPicker component
+// Should contain all the attributes defined on Shoelace's SLColorPicker component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/color-picker
 public extension HTMLAttribute where Tag == HTMLTag.SLColorPicker {
     enum SLColorPickerFormatValue: String {
         case hex

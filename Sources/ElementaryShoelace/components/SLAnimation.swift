@@ -8,8 +8,9 @@ public extension HTMLTag {
 
 public typealias SLAnimation<Content: HTML> = HTMLElement<HTMLTag.SLAnimation, Content>
 
-// Should contain all the attributes defined on shoelaces SLAnimation component
+// Should contain all the attributes defined on Shoelace's SLAnimation component
 // - that can be rendered on the server side and are not only getters
+// - for further info see https://shoelace.style/components/animation
 public extension HTMLAttribute where Tag == HTMLTag.SLAnimation {
     enum SLAnimationName: String {
         case backInDown = "back-in-down"
@@ -128,14 +129,14 @@ public extension HTMLAttribute where Tag == HTMLTag.SLAnimation {
 
     enum SLAnimationPlaybackDirection: String {
         case normal
-        case revers
+        case reverse
         case alternate
         case alternateReverse = "alternate-reverse"
     }
 
     /// Determines the direction of playback as well as the behavior when reaching the end of an iteration. [Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction). Default `normal`.
-    /// - Parameter direction: 
-    /// - Returns: 
+    /// - Parameter direction: The direction of the animation (`normal`, `reverse`, `alternate`, `alternate-reverse`)
+    /// - Returns: The HTMLAttribute (`direction="(value, ...)"`)
     static func direction (_ direction: SLAnimationPlaybackDirection...) -> Self {
         .init(name: "direction", value: direction.map(\.rawValue).joined(separator: ","), mergedBy: .appending(seperatedBy: ","))
     }
@@ -207,7 +208,8 @@ public extension HTMLAttribute where Tag == HTMLTag.SLAnimation {
     }
 
     /// Sets how the animation applies styles to its target before and after its execution. Default `auto`.
-    /// - Parameter direction: The fill mode to be used
+    /// - Parameter direction: The fill mode to be used (`auto`, `none`, `forwards`, `backwards`, `both`).
+
     /// - Returns: The HTMLAttribute (`fill="(value, ...)"`)	
     static func fill (_ fill: SLAnimationFillMode...) -> Self {
         .init(name: "fill", value: fill.map(\.rawValue).joined(separator: ","), mergedBy: .appending(seperatedBy: ","))
