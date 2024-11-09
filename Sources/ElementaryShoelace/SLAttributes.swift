@@ -8,10 +8,7 @@ public extension HTMLAttribute where Tag: HTMLTrait.Shoelace {
     static func slot(_ slot: String) -> Self {
         HTMLAttribute(name: "slot", value: slot)
     }
-}
 
-// TODO: find better spot for this
-public extension HTMLAttribute where Tag: HTMLTrait.Shoelace {
     static func `class`(part: String, _ tailwind: String) -> Self {
         let tailwind = tailwind.split(separator: " ").map { s in
             "[&::part(\(part))]:\(s)"
@@ -40,6 +37,54 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.size {
     /// - Returns: The HTMLAttribute (`size="(value)"`)
     static func size(_ size: Size) -> Self {
         HTMLAttribute(name: "size", value: size.rawValue)
+    }
+}
+
+public extension HTMLTrait.Attributes.shoelace {
+    protocol clearable {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.clearable {
+    /// Adds a clear button that appears when the element is not empty. Default `false`.
+    /// - Returns: The HTMLAttribute (`clearable`)
+    static var clearable: Self {
+        HTMLAttribute(name: "clearable", value: nil)
+    }
+}
+
+public extension HTMLTrait.Attributes.shoelace {
+    protocol open {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.open {
+    /// Indicates whether or not the element is open.  Default `false`.
+    /// - Returns: The HTMLAttribute (`open`)
+    static var open: Self {
+        HTMLAttribute(name: "open", value: nil)
+    }
+}
+
+public extension HTMLTrait.Attributes.shoelace {
+    protocol filled {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.filled {
+    /// Makes the component appear disabled. Default `false`.
+    static var filled: Self {
+        HTMLAttribute(name: "filled", value: nil)
+    }
+}
+
+public extension HTMLTrait.Attributes.shoelace {
+    protocol helpText {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.helpText {
+    /// Sets the help text of the component. Default `''`.
+    /// - Parameter text: The text of the help text.
+    /// - Returns: The HTMLAttribute (`help-text="(text)"`)
+    static func helpText(_ text: String) -> Self {
+        HTMLAttribute(name: "help-text", value: text)
     }
 }
 

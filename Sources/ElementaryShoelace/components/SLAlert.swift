@@ -11,11 +11,6 @@ public typealias SLAlert<Content: HTML> = HTMLElement<HTMLTag.SLAlert, Content>
 // Should contain all the attributes defined on shoelaces SLAlert component
 // - that can be rendered on the server side and are not only getters
 public extension HTMLAttribute where Tag == HTMLTag.SLAlert {
-    /// Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can use the `show()` and `hide()` methods and this attribute will reflect the alert’s open state. Default `false`.
-    static var open: Self {
-        HTMLAttribute(name: "open", value: nil)
-    }
-
     /// Enables a close button that allows the user to dismiss the alert. Default `false`.
     static var closable: Self {
         HTMLAttribute(name: "closable", value: nil)
@@ -54,3 +49,5 @@ public extension HTMLAttribute where Tag == HTMLTag.SLAlert {
         HTMLAttribute(name: "countdown", value: countdown.rawValue)
     }
 }
+
+extension HTMLTag.SLAlert: HTMLTrait.Attributes.shoelace.open {}

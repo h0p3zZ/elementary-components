@@ -16,6 +16,12 @@ public extension HTMLAttributeValue {
         public static var slCancel: Self { .init(rawValue: "sl-cancel") }
         public static var slFinish: Self { .init(rawValue: "sl-finish") }
         public static var slStart: Self { .init(rawValue: "sl-start") }
+        public static var slChange: Self { .init(rawValue: "sl-change") }
+        public static var slClear: Self { .init(rawValue: "sl-clear") }
+        public static var slInput: Self { .init(rawValue: "sl-input") }
+        public static var slFocus: Self { .init(rawValue: "sl-focus") }
+        public static var slBlur: Self { .init(rawValue: "sl-blur") }
+        public static var slInvalid: Self { .init(rawValue: "sl-invalid") }
     }
 }
 
