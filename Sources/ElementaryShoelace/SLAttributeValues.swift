@@ -22,6 +22,7 @@ public extension HTMLAttributeValue {
         public static var slFocus: Self { .init(rawValue: "sl-focus") }
         public static var slBlur: Self { .init(rawValue: "sl-blur") }
         public static var slInvalid: Self { .init(rawValue: "sl-invalid") }
+        public static var slSlideChange: Self { .init(rawValue: "sl-slide-change") }
     }
 }
 
