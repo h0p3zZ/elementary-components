@@ -24,8 +24,6 @@ public extension HTMLAttribute where Tag == HTMLTag.SLDialog {
     static var noHeader: Self {
         HTMLAttribute(name: "no-header", value: nil)
     }
-
-    
 }
 
 extension HTMLTag.SLDialog: HTMLTrait.Attributes.shoelace.open {}
