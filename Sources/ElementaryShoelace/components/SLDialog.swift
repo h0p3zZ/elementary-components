@@ -18,12 +18,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLDialog {
     static func label(_ label: String) -> Self {
         HTMLAttribute(name: "label", value: label)
     }
-
-    /// Disables the header. This will also remove the default close button, so please ensure you provide an easy, accessible way for users to dismiss the dialog. Default `false`.
-    /// - Returns: The HTMLAttribute (`no-header`)
-    static var noHeader: Self {
-        HTMLAttribute(name: "no-header", value: nil)
-    }
 }
 
 extension HTMLTag.SLDialog: HTMLTrait.Attributes.shoelace.open {}
+extension HTMLTag.SLDialog: HTMLTrait.Attributes.shoelace.noHeader {}

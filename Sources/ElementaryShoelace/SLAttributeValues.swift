@@ -24,6 +24,8 @@ public extension HTMLAttributeValue {
         public static var slInvalid: Self { .init(rawValue: "sl-invalid") }
         public static var slSlideChange: Self { .init(rawValue: "sl-slide-change") }
         public static var slCopy: Self { .init(rawValue: "sl-copy") }
+        public static var slInitialFocus: Self { .init(rawValue: "sl-initial-focus") }
+        public static var slRequestClose: Self { .init(rawValue: "sl-request-close") }
     }
 }
 

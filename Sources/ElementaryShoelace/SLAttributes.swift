@@ -138,6 +138,20 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.play {
     }
 }
 
+public extension HTMLTrait.Attributes.shoelace {
+    protocol noHeader {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.noHeader {
+    /// Disables the header. This will also remove the default close button, so please ensure you provide an easy, accessible way for users to dismiss the component.
+    /// - Returns: The HTMLAttribute (`no-header`)
+    static var noHeader: Self {
+        HTMLAttribute(name: "no-header", value: nil)
+    }
+}
+
+
+
 // TODO: upstream to Elementary
 extension HTMLTrait.Attributes {
     protocol value {}
