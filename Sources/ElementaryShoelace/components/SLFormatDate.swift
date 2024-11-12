@@ -17,7 +17,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLFormatDate {
     /// - Parameter date: The date to format.
     /// - Returns: The HTMLAttribute (`date="(value)"`)
     static func date(_ date: Date) -> Self {
-        HTMLAttribute(name: "date", value: date.ISO8601Format())
+        HTMLAttribute(name: "date", value: ISO8601DateFormatter().string(from: date))
     }
 
     enum SLFromatDateTextValue: String {
