@@ -23,7 +23,7 @@ Add the dependency to `Package.swift`
 ### [Shoelace](https://shoelace.style)
 
 ```swift
-.product(name: "ElementarySheolace", package: "elementary-components")
+.product(name: "ElementaryShoelace", package: "elementary-components")
 ```
 
 **🚧 Under Construction 🚧**
