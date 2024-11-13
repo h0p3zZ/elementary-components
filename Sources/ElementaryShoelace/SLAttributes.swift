@@ -153,21 +153,21 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.noHeader
 
 
 // TODO: upstream to Elementary
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol value {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.value {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.value {
     static func value(_ value: String) -> Self {
         HTMLAttribute(name: "value", value: value)
     }
 }
 
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol readonly {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.value {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.value {
     static func readonly() -> Self {
         HTMLAttribute(name: "readonly", value: nil)
     }
@@ -175,11 +175,11 @@ extension HTMLAttribute where Tag: HTMLTrait.Attributes.value {
 
 extension HTMLTag.input: HTMLTrait.Attributes.readonly {}
 
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol pattern {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.pattern {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.pattern {
     static func pattern(_ pattern: String) -> Self {
         HTMLAttribute(name: "pattern", value: pattern)
     }
@@ -187,11 +187,11 @@ extension HTMLAttribute where Tag: HTMLTrait.Attributes.pattern {
 
 extension HTMLTag.input: HTMLTrait.Attributes.pattern {}
 
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol minlength {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.minlength {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.minlength {
     static func minlength(_ length: Int) -> Self {
         HTMLAttribute(name: "minlength", value: String(length))
     }
@@ -199,11 +199,11 @@ extension HTMLAttribute where Tag: HTMLTrait.Attributes.minlength {
 
 extension HTMLTag.input: HTMLTrait.Attributes.minlength {}
 
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol maxlength {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.maxlength {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.maxlength {
     static func maxlength(_ length: Int) -> Self {
         HTMLAttribute(name: "maxlength", value: String(length))
     }
@@ -211,11 +211,11 @@ extension HTMLAttribute where Tag: HTMLTrait.Attributes.maxlength {
 
 extension HTMLTag.input: HTMLTrait.Attributes.maxlength {}
 
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol min {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.min {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.min {
     static func min(_ minVal: Int) -> Self {
         HTMLAttribute(name: "min", value: String(minVal))
     }
@@ -227,11 +227,11 @@ extension HTMLAttribute where Tag: HTMLTrait.Attributes.min {
 
 extension HTMLTag.input: HTMLTrait.Attributes.min {}
 
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol max {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.max {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.max {
     static func max(_ maxVal: Int) -> Self {
         HTMLAttribute(name: "max", value: String(maxVal))
     }
@@ -243,11 +243,11 @@ extension HTMLAttribute where Tag: HTMLTrait.Attributes.max {
 
 extension HTMLTag.input: HTMLTrait.Attributes.max {}
 
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol step {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.step {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.step {
     static func step(_ step: Int) -> Self {
         HTMLAttribute(name: "min", value: String(step))
     }
@@ -255,11 +255,11 @@ extension HTMLAttribute where Tag: HTMLTrait.Attributes.step {
 
 extension HTMLTag.input: HTMLTrait.Attributes.step {}
 
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol autocapitalize {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.autocapitalize {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.autocapitalize {
     enum AutocapitalizeValue: String {
         case off
         case none
@@ -277,11 +277,11 @@ extension HTMLAttribute where Tag: HTMLTrait.Attributes.autocapitalize {
 extension HTMLTag.input: HTMLTrait.Attributes.autocapitalize {}
 extension HTMLTag.textarea: HTMLTrait.Attributes.autocapitalize {}
 
-extension HTMLTrait.Attributes {
+public extension HTMLTrait.Attributes {
     protocol autocorrect {}
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.autocorrect {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.autocorrect {
     enum AutocorrectValue: String {
         case off
         case on
@@ -292,19 +292,19 @@ extension HTMLAttribute where Tag: HTMLTrait.Attributes.autocorrect {
     }
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.Global {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.Global {
     static func enterkeyhint(_ value: String) -> Self {
         HTMLAttribute(name: "enterkeyhint", value: value)
     }
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.Global {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.Global {
     static func spellcheck(_ value: Bool) -> Self {
         HTMLAttribute(name: "spellcheck", value: String(value))
     }
 }
 
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.Global {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.Global {
     enum InputModeValue: String {
         case none
         case text

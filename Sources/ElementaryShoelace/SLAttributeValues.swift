@@ -32,9 +32,9 @@ public extension HTMLAttributeValue {
 
 
 // TODO: this should be public in Elementary
-protocol HTMLEventName: RawRepresentable {}
+public protocol HTMLEventName: RawRepresentable {}
 
-extension HTMLAttribute {
+public extension HTMLAttribute {
     init(on eventName: some HTMLEventName, script: String) {
         self.init(name: "on\(eventName.rawValue)", value: script)
     }
@@ -43,7 +43,7 @@ extension HTMLAttribute {
 public extension HTMLTrait.Attributes {
     protocol alt {}
 }
-extension HTMLAttribute where Tag: HTMLTrait.Attributes.alt {
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.alt {
     static func alt(_ alt: String) -> Self {
         .init(name: "alt", value: alt)
     }
