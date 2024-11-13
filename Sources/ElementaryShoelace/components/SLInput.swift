@@ -13,36 +13,61 @@ public typealias SLInput<Content: HTML> = HTMLElement<HTMLTag.SLInput, Content>
 // - that can be rendered on the server side and are not only getters
 // - for further info see https://shoelace.style/components/input
 public extension HTMLAttribute where Tag == HTMLTag.SLInput {
-    static func placeholder(_ text: String) -> Self {
-        HTMLAttribute(name: "placeholder", value: text)
-    }
-
     enum SLInputType: String {
+        case date
+        case dateLocal = "date-local"
         case email
         case number
-        case date
+        case password
+        case search
+        case tel
+        case text
+        case time
+        case url
     }
 
+    /// 	The type of input. Works the same as a native <input> element, but only a subset of types are supported. Defaults `text`.
+    /// - Parameter type: Input type. See ``SLInputType`` for possible values.
+    /// - Returns: The HTMLAttribute (`type="(value)"`)
     static func type(_ type: SLInputType) -> Self {
         HTMLAttribute(name: "type", value: type.rawValue)
     }
 
+    /// Adds a button to toggle the password’s visibility. Only applies to password types.
+    /// - Returns: The HTMLAttribute (`password-toggle`)
     static var pssswordToggle: Self {
         HTMLAttribute(name: "password-toggle", value: nil)
     }
 
+    /// Determines whether or not the password is currently visible. Only applies to password input types.
+    /// - Returns: The HTMLAttribute (`password-visible`)
     static var passwordVisible: Self {
         HTMLAttribute(name: "password-visible", value: nil)
     }
 
+    /// Hides the browser’s built-in increment/decrement spin buttons for number inputs.
+    /// - Returns: The HTMLAttribute (`no-spin-buttons`)
     static var noSpinButtons: Self {
         HTMLAttribute(name: "no-spin-buttons", value: nil)
     }
 
+    /* 
+    *   enterkeyhint
+    *   spellcheck
+    *   inputmode
+    *   are defined on HTMLTrait.Attributes.Global
+    */
+
+    /// Gets or sets the current value as a Date object. Returns `null` if the value can’t be converted. This will use the native `<input type="{{type}}">` implementation and may result in an error.
+    /// - Parameter date: The date to set as the value.
+    /// - Returns: The HTMLAttribute (`value="(value)"`)
     static func valueAsDate(_ date: Date) -> Self {
         HTMLAttribute(name: "value", value: "\(date)")
     }
 
+    /// Gets or sets the current value as a number. Returns NaN if the value can’t be converted.
+    /// - Parameter number: The number to set as the value.
+    /// - Returns: The HTMLAttribute (`value="(value)"`)
     static func valueAsNumber(_ number: any Numeric) -> Self {
         HTMLAttribute(name: "value", value: "\(number)")
     }
