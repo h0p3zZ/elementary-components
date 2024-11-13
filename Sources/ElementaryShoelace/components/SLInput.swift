@@ -15,7 +15,7 @@ public typealias SLInput<Content: HTML> = HTMLElement<HTMLTag.SLInput, Content>
 public extension HTMLAttribute where Tag == HTMLTag.SLInput {
     enum SLInputType: String {
         case date
-        case dateLocal = "date-local"
+        case datetimeLocal = "datetime-local"
         case email
         case number
         case password
