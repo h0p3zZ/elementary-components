@@ -83,6 +83,7 @@ extension HTMLTag.SLInput: HTMLTrait.Attributes.label {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.shoelace.helpText {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.shoelace.clearable {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.disabled {}
+extension HTMLTag.SLInput: HTMLTrait.Attributes.placeholder {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.readonly {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.form {}
 extension HTMLTag.SLInput: HTMLTrait.Attributes.required {}
