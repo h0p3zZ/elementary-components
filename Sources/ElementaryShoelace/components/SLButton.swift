@@ -35,12 +35,6 @@ public extension HTMLAttribute where Tag == HTMLTag.SLButton {
         HTMLAttribute(name: "caret", value: nil)
     }
 
-    /// Draws the button in a loading state. Default `false`.
-    /// - Returns: The HTMLAttribute (`loading`)
-    static var loading: Self {
-        HTMLAttribute(name: "loading", value: nil)
-    }
-
     /// Draws an outlined button. Default `false`.
     /// - Returns: The HTMLAttribute (`outline`)
     static var outline: Self {
@@ -127,6 +121,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLButton {
 
 extension HTMLTag.SLButton: HTMLTrait.Attributes.shoelace.size {}
 extension HTMLTag.SLButton: HTMLTrait.Attributes.disabled {}
+extension HTMLTag.SLButton: HTMLTrait.Attributes.shoelace.loading {}
 extension HTMLTag.SLButton: HTMLTrait.Attributes.shoelace.pill {}
 extension HTMLTag.SLButton: HTMLTrait.Attributes.name {}
 extension HTMLTag.SLButton: HTMLTrait.Attributes.value {}

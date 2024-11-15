@@ -163,6 +163,30 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.download
     }
 }
 
+public extension HTMLTrait.Attributes.shoelace {
+    protocol checked {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.checked {
+    /// Draws the checkbox in a checked state. Default `false`.
+    /// - Returns: The HTMLAttribute (`checked`)
+    static var checked: Self {
+        HTMLAttribute(name: "checked", value: nil)
+    }
+}
+
+public extension HTMLTrait.Attributes.shoelace {
+    protocol loading {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.loading {
+    /// Draws the component in a loading state. Default `false`.
+    /// - Returns: The HTMLAttribute (`loading`)
+    static var loading: Self {
+        HTMLAttribute(name: "loading", value: nil)
+    }
+}
+
 
 
 // TODO: upstream to Elementary
