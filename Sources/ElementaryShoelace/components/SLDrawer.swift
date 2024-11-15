@@ -21,13 +21,13 @@ public extension HTMLAttribute where Tag == HTMLTag.SLDrawer {
 
     enum SLDrawerPlacementValue: String {
         case top
-        case right
+        case end
         case bottom
-        case left
+        case start
     }
 
     /// The direction from which the drawer will open. Default `end`.
-    /// - Parameter placement: The placement of the drawer (`top`, `right`, `bottom`, `left`).
+    /// - Parameter placement: The placement of the drawer (`top`, `end`, `bottom`, `start`).
     /// - Returns: The HTMLAttribute (`placement="(value)"`)
     static func placement(_ placement: SLDrawerPlacementValue) -> Self {
         HTMLAttribute(name: "placement", value: placement.rawValue)

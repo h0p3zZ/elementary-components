@@ -12,8 +12,8 @@ public typealias SLDialog<Content: HTML> = HTMLElement<HTMLTag.SLDialog, Content
 // - that can be rendered on the server side and are not only getters
 // - for further info see https://shoelace.style/components/dialog
 public extension HTMLAttribute where Tag == HTMLTag.SLDialog {
-    /// 	The dialog’s label as displayed in the header. You should always include a relevant label even when using no-header, as it is required for proper accessibility. If you need to display HTML, use the label slot instead. Default ``.
-    /// - Parameter label: The vlaue of the label.
+    /// The dialog’s label as displayed in the header. You should always include a relevant label even when using no-header, as it is required for proper accessibility. If you need to display HTML, use the label slot instead. Default ``.
+    /// - Parameter label: The value of the label.
     /// - Returns: The HTMLAttribute (`label="(value)"`)
     static func label(_ label: String) -> Self {
         HTMLAttribute(name: "label", value: label)

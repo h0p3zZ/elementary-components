@@ -20,23 +20,23 @@ public extension HTMLAttribute where Tag == HTMLTag.SLFormatDate {
         HTMLAttribute(name: "date", value: ISO8601DateFormatter().string(from: date))
     }
 
-    enum SLFromatDateTextValue: String {
+    enum SLFormatDateTextValue: String {
         case long
         case short
         case narrow
     }
 
     /// The format for displaying the weekday.
-    /// - Parameter weekday: The format for displaying the weekday. See ``SLFromatDateTextValue`` for possible values.
+    /// - Parameter weekday: The format for displaying the weekday. See ``SLFormatDateTextValue`` for possible values.
     /// - Returns: The HTMLAttribute (`weekday="(value)"`)
-    static func weekday(_ weekday: SLFromatDateTextValue) -> Self {
+    static func weekday(_ weekday: SLFormatDateTextValue) -> Self {
         HTMLAttribute(name: "weekday", value: weekday.rawValue)
     }
 
     /// The format for displaying the era.
-    /// - Parameter era: The format for displaying the era. See ``SLFromatDateTextValue`` for possible values. 
+    /// - Parameter era: The format for displaying the era. See ``SLFormatDateTextValue`` for possible values. 
     /// - Returns: The HTMLAttribute (`era="(value)"`)
-    static func era(_ era: SLFromatDateTextValue) -> Self {
+    static func era(_ era: SLFormatDateTextValue) -> Self {
         HTMLAttribute(name: "era", value: era.rawValue)
     }
 

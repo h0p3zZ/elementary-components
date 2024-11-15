@@ -28,7 +28,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLDropdown {
     }
 
     /// The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel inside of the viewport. Default `bottom-start`.
-    /// - Parameter placement: The placement of the dropdown pannel. See ``SLDropdownPlacementValue`` for possible values.
+    /// - Parameter placement: The placement of the dropdown panel. See ``SLDropdownPlacementValue`` for possible values.
     /// - Returns: The HTMLAttribute (`placement="(value)"`)
     static func placement(_ placement: SLDropdownPlacementValue) -> Self {
         HTMLAttribute(name: "placement", value: placement.rawValue)
