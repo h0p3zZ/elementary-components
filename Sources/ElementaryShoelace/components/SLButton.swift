@@ -66,13 +66,6 @@ public extension HTMLAttribute where Tag == HTMLTag.SLButton {
         HTMLAttribute(name: "type", value: type.rawValue)
     }
 
-    /// Tells the browser to download the linked file as this filename. Only used when href is present.
-    /// - Parameter url: The URL to download.
-    /// - Returns: The HTMLAttribute (`download="(url)"`)
-    static func download(_ url: String) -> Self {
-        HTMLAttribute(name: "download", value: url)
-    }
-
     /// Used to override the form owner’s action attribute.
     /// - Parameter url: The URL to override the form owner’s action attribute.
     /// - Returns: The HTMLAttribute (`formaction="(url)"`)
@@ -140,4 +133,5 @@ extension HTMLTag.SLButton: HTMLTrait.Attributes.value {}
 extension HTMLTag.SLButton: HTMLTrait.Attributes.href {}
 extension HTMLTag.SLButton: HTMLTrait.Attributes.target {}
 extension HTMLTag.SLButton: HTMLTrait.Attributes.rel {}
+extension HTMLTag.SLButton: HTMLTrait.Attributes.shoelace.download {}
 extension HTMLTag.SLButton: HTMLTrait.Attributes.form {}

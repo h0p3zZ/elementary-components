@@ -150,6 +150,19 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.noHeader
     }
 }
 
+public extension HTMLTrait.Attributes.shoelace {
+    protocol download {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.download {
+    /// Tells the browser to download the linked file as this filename. Only used when href is present.
+    /// - Parameter url: The URL to download.
+    /// - Returns: The HTMLAttribute (`download="(url)"`)
+    static func download(_ url: String) -> Self {
+        HTMLAttribute(name: "download", value: url)
+    }
+}
+
 
 
 // TODO: upstream to Elementary
