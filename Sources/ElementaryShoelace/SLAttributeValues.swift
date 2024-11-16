@@ -27,6 +27,7 @@ public extension HTMLAttributeValue {
         public static var slInitialFocus: Self { .init(rawValue: "sl-initial-focus") }
         public static var slRequestClose: Self { .init(rawValue: "sl-request-close") }
         public static var slSelect: Self { .init(rawValue: "sl-select") }
+        public static var slMutation: Self { .init(rawValue: "sl-mutation") }
     }
 }
 
