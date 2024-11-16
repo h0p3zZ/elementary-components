@@ -187,6 +187,19 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.loading 
     }
 }
 
+public extension HTMLTrait.Attributes.shoelace {
+    protocol progressValue {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.progressValue {
+    /// The current progress as a percentage. Default `0`.
+    /// - Parameter percentage: The current progress as a percentage, 0 to 100.
+    /// - Returns: The HTMLAttribute (`value="(percentage)"`)
+    static func value(_ percentage: Int) -> Self {
+        HTMLAttribute(name: "value", value: String(percentage))
+    }
+}
+
 
 
 // TODO: upstream to Elementary
