@@ -83,7 +83,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
     /// Attaches an arrow to the popup. The arrow’s size and color can be customized using the `--arrow-size` and `--arrow-color` custom properties. For additional customizations, you can also target the arrow using `::part(arrow)` in your stylesheet.
     /// - Returns: The HTMLAttribute (`arrow`)
     static var arrow: Self {
-        .init(name: "arrow", value: "")
+        .init(name: "arrow", value: nil)
     }
 
     enum ArrowPlacementValue: String {
@@ -110,13 +110,13 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
     /// When set, placement of the popup will flip to the opposite site to keep it in view. You can use flipFallbackPlacements to further configure how the fallback placement is determined.
     /// - Returns: The HTMLAttribute (`flip`)
     static var flip: Self {
-        .init(name: "flip", value: "")
+        .init(name: "flip", value: nil)
     }
 
     /// If the preferred placement doesn’t fit, popup will be tested in these fallback placements until one fits. Must be a string of any number of placements separated by a space, e.g. “top bottom left”. If no placement fits, the flip fallback strategy will be used instead.
     /// - Returns: The HTMLAttribute (`flip-fallback-placements`)
     static var flipFallbackPlacements: Self {
-        .init(name: "flip-fallback-placements", value: "")
+        .init(name: "flip-fallback-placements", value: nil)
     }
 
     enum FlipFallbackStrategyValue: String {
@@ -148,7 +148,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
     /// Moves the popup along the axis to keep it in view when clipped.
     /// - Returns: The HTMLAttribute (`shift`)
     static var shift: Self {
-        .init(name: "shift", value: "")
+        .init(name: "shift", value: nil)
     }
 
     /// The shift boundary describes clipping element(s) that overflow will be checked relative to when shifting. By default, the boundary includes overflow ancestors that will cause the element to be clipped. If needed, you can change the boundary by passing a reference to one or more elements to this property.
@@ -208,6 +208,6 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
     /// When a gap exists between the anchor and the popup element, this option will add a “hover bridge” that fills the gap using an invisible element. This makes listening for events such as mouseenter and mouseleave more sane because the pointer never technically leaves the element. The hover bridge will only be drawn when the popover is active.
     /// - Returns: The HTMLAttribute (`hover-bridge`)
     static var hoverBridge: Self {
-        .init(name: "hover-bridge", value: "")
+        .init(name: "hover-bridge", value: nil)
     }
 }

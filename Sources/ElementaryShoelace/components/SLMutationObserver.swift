@@ -22,25 +22,25 @@ public extension HTMLAttribute where Tag == HTMLTag.SLMutationObserver {
     /// Indicates whether or not the attribute’s previous value should be recorded when monitoring changes.
     /// - Returns: The HTMLAttribute (`attr-old-value`)
     static var attrOldValue: Self {
-        .init(name: "attr-old-value", value: "")
+        .init(name: "attr-old-value", value: nil)
     }
 
     /// Watches for changes to the character data contained within the node.
     /// - Returns: The HTMLAttribute (`char-data`)
     static var charData: Self {
-        .init(name: "char-data", value: "")
+        .init(name: "char-data", value: nil)
     }
 
     /// Indicates whether or not the previous value of the node’s text should be recorded.
     /// - Returns: The HTMLAttribute (`char-data-old-value`)
     static var charDataOldValue: Self {
-        .init(name: "char-data-old-value", value: "")
+        .init(name: "char-data-old-value", value: nil)
     }
 
     /// Watches for the addition or removal of new child nodes.
     /// - Returns: The HTMLAttribute (`child-list`)
     static var childList: Self {
-        .init(name: "child-list", value: "")
+        .init(name: "child-list", value: nil)
     }
 }
 
