@@ -1,4 +1,5 @@
 import Elementary
+import Foundation
 
 public extension HTMLTrait {
     protocol Shoelace: Paired { }
@@ -197,6 +198,19 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.progress
     /// - Returns: The HTMLAttribute (`value="(percentage)"`)
     static func value(_ percentage: Int) -> Self {
         HTMLAttribute(name: "value", value: String(percentage))
+    }
+}
+
+public extension HTMLTrait.Attributes.shoelace {
+    protocol date {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.date {
+    /// The date/time to format. If not set, the current date and time will be used. When passing a string, it’s strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert a date to this format in JavaScript, use `date.toISOString()`. Default `new Date()`.
+    /// - Parameter date: The date to format.
+    /// - Returns: The HTMLAttribute (`date="(value)"`)
+    static func date(_ date: Date) -> Self {
+        HTMLAttribute(name: "date", value: ISO8601DateFormatter().string(from: date))
     }
 }
 

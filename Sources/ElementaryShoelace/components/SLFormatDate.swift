@@ -13,13 +13,6 @@ public typealias SLFormatDate<Content: HTML> = HTMLElement<HTMLTag.SLFormatDate,
 // - that can be rendered on the server side and are not only getters
 // - for further info see https://shoelace.style/components/format-date
 public extension HTMLAttribute where Tag == HTMLTag.SLFormatDate {
-    /// The date/time to format. If not set, the current date and time will be used. When passing a string, it’s strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert a date to this format in JavaScript, use `date.toISOString()`. Default `new Date()`.
-    /// - Parameter date: The date to format.
-    /// - Returns: The HTMLAttribute (`date="(value)"`)
-    static func date(_ date: Date) -> Self {
-        HTMLAttribute(name: "date", value: ISO8601DateFormatter().string(from: date))
-    }
-
     enum SLFormatDateTextValue: String {
         case long
         case short
@@ -129,3 +122,5 @@ public extension HTMLAttribute where Tag == HTMLTag.SLFormatDate {
         HTMLAttribute(name: "hour-format", value: hourFormat.rawValue)
     }
 }
+
+extension HTMLTag.SLFormatDate: HTMLTrait.Attributes.shoelace.date {}
