@@ -32,7 +32,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
         .init(name: "active", value: "")
     }
 
-    enum PlacemetValue: String {
+    enum SLPopupPlacemetValue: String {
         case top
         case topStart = "top-start"
         case topEnd = "top-end"
@@ -48,9 +48,9 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
     }
 
     /// The preferred placement of the popup. Note that the actual placement will vary as configured to keep the panel inside of the viewport. Default `top`.
-    /// - Parameter placement: The placement of the popup. See ``PlacemetValue`` for possible values.
+    /// - Parameter placement: The placement of the popup. See ``SLPopupPlacemetValue`` for possible values.
     /// - Returns: The HTMLAttribute (`placement="(value)"`)
-    static func placement(_ placement: PlacemetValue) -> Self {
+    static func placement(_ placement: SLPopupPlacemetValue) -> Self {
         .init(name: "placement", value: placement.rawValue)
     }
 
@@ -86,7 +86,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
         .init(name: "arrow", value: nil)
     }
 
-    enum ArrowPlacementValue: String {
+    enum SLPopupArrowPlacementValue: String {
         case start
         case end
         case center
@@ -94,9 +94,9 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
     }
 
     /// The placement of the arrow. The default is anchor, which will align the arrow as close to the center of the anchor as possible, considering available space and arrow-padding. A value of start, end, or center will align the arrow to the start, end, or center of the popover instead. Default `anchor`.
-    /// - Parameter arrowPlacement: The placement of the arrow. See ``ArrowPlacementValue`` for possible values.
+    /// - Parameter arrowPlacement: The placement of the arrow. See ``SLPopupArrowPlacementValue`` for possible values.
     /// - Returns: The HTMLAttribute (`arrow-placement="(value)"`)
-    static func arrowPlacement(_ arrowPlacement: ArrowPlacementValue) -> Self {
+    static func arrowPlacement(_ arrowPlacement: SLPopupArrowPlacementValue) -> Self {
         .init(name: "arrow-placement", value: arrowPlacement.rawValue)
     }
 
@@ -119,7 +119,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
         .init(name: "flip-fallback-placements", value: nil)
     }
 
-    enum FlipFallbackStrategyValue: String {
+    enum SLPopupFlipFallbackStrategyValue: String {
         case bestFit = "best-fit"
         case initial
     }
@@ -127,7 +127,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
     /// When neither the preferred placement nor the fallback placements fit, this value will be used to determine whether the popup should be positioned using the best available fit based on available space or as it was initially preferred. Default `best-fit`.
     /// - Parameter flipFallbackStrategy: The strategy of the flip fallback (`best-fit` or `initial`).
     /// - Returns: The HTMLAttribute (`flip-fallback-strategy="(value)"`)
-    static func flipFallbackStrategy(_ flipFallbackStrategy: FlipFallbackStrategyValue) -> Self {
+    static func flipFallbackStrategy(_ flipFallbackStrategy: SLPopupFlipFallbackStrategyValue) -> Self {
         .init(name: "flip-fallback-strategy", value: flipFallbackStrategy.rawValue)
     }
 
@@ -165,7 +165,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
         .init(name: "shift-padding", value: String(shiftPadding))
     }
 
-    enum AutoSizeVAlue: String {
+    enum SLPopupAutoSizeVAlue: String {
         case horizontal
         case vertical
         case both
@@ -174,11 +174,11 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
     /// When set, this will cause the popup to automatically resize itself to prevent it from overflowing.
     /// - Parameter autoSize: The auto size value (`horizontal`, `vertical` or `both`).
     /// - Returns: The HTMLAttribute (`auto-size="(value)"`)
-    static func autoSize(_ autoSize: AutoSizeVAlue) -> Self {
+    static func autoSize(_ autoSize: SLPopupAutoSizeVAlue) -> Self {
         .init(name: "auto-size", value: autoSize.rawValue)
     }
 
-    enum SyncValue: String {
+    enum SLPopupSyncValue: String {
         case width
         case height
         case both
@@ -187,7 +187,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
     /// Syncs the popup’s width or height to that of the anchor element.
     /// - Parameter sync: The sync value (`width`, `height` or `both`).
     /// - Returns: The HTMLAttribute (`sync="(value)"`)
-    static func sync(_ sync: SyncValue) -> Self {
+    static func sync(_ sync: SLPopupSyncValue) -> Self {
         .init(name: "sync", value: sync.rawValue)
     }
 

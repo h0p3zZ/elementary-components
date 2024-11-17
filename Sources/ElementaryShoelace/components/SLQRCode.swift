@@ -40,7 +40,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLQRCode {
         .init(name: "radius", value: String(radius))
     }
 
-    enum ErrorCorrectionValue: String {
+    enum SLQRCodeErrorCorrectionValue: String {
         case L
         case M
         case Q
@@ -48,9 +48,9 @@ public extension HTMLAttribute where Tag == HTMLTag.SLQRCode {
     }
 
     /// The level of error correction to use. [Learn more](https://www.qrcode.com/en/about/error_correction.html) Default `H`.
-    /// - Parameter value: The level of error correction to use.
+    /// - Parameter value: The level of error correction to use. See `SLQRCodeErrorCorrectionValue` for possible values.
     /// - Returns: The HTMLAttribute (`error-correction="(value)"`)
-    static func errorCorrection(_ value: ErrorCorrectionValue) -> Self {
+    static func errorCorrection(_ value: SLQRCodeErrorCorrectionValue) -> Self {
         .init(name: "error-correction", value: value.rawValue)
     }
 }
