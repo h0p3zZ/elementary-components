@@ -30,6 +30,7 @@ public extension HTMLAttributeValue {
         public static var slMutation: Self { .init(rawValue: "sl-mutation") }
         public static var slReposition: Self { .init(rawValue: "sl-reposition") }
         public static var slHover: Self { .init(rawValue: "sl-hover") }
+        public static var slResize: Self { .init(rawValue: "sl-resize") }
     }
 }
 
