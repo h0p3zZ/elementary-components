@@ -2,7 +2,7 @@ import Elementary
 
 public extension HTMLTag {
     enum SLResizeObserver: HTMLTrait.Shoelace {
-        public static let name = "sl-resize-oberver"
+        public static let name = "sl-resize-observer"
     }
 }
 
