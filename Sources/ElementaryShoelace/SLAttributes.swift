@@ -95,8 +95,9 @@ public extension HTMLTrait.Attributes.shoelace {
 
 public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.pill {
     /// Makes the component pill style. Default `false`.
+    /// - Returns: The HTMLAttribute (`pill`)
     static var pill: Self {
-        HTMLAttribute(name: "pilled", value: nil)
+        HTMLAttribute(name: "pill", value: nil)
     }
 }
 
