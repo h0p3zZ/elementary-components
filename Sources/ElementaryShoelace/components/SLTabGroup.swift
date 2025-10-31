@@ -20,7 +20,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLTabGroup {
     }
 
     /// The placement of the tabs. Defaults to `top`.
-    /// - Parameter value: The placement value.
+    /// - Parameter value: The placement value. Options: (`top`, `bottom`, `start`, `end`).
     /// - Returns: The HTMLAttribute (`placement="(value)"`)
     static func placement(_ value: SLTabGroupPlacementValue) -> Self {
         HTMLAttribute(name: "placement", value: value.rawValue)
@@ -31,8 +31,8 @@ public extension HTMLAttribute where Tag == HTMLTag.SLTabGroup {
         case manual
     }
 
-    /// 	When set to auto, navigating tabs with the arrow keys will instantly show the corresponding tab panel. When set to manual, the tab will receive focus but will not show until the user presses spacebar or enter. Defaults to `auto`.
-    /// - Parameter value: The activation value.
+    /// When set to auto, navigating tabs with the arrow keys will instantly show the corresponding tab panel. When set to manual, the tab will receive focus but will not show until the user presses spacebar or enter. Defaults to `auto`.
+    /// - Parameter value: The activation value. Options: (`auto`, `manual`).
     /// - Returns: The HTMLAttribute (`activation="(value)"`)
     static func activation(_ value: SLTabGroupActivationValue) -> Self {
         HTMLAttribute(name: "activation", value: value.rawValue)
