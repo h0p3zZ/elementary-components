@@ -42,7 +42,8 @@ I created this library/collection of libraries to improve ease of use and to ext
 
 ## Future directions
 
-- Add library for all current shoelace components
-- Create custom components (Paginator, DataTable, DataTableFilter) using Elementary and [ElemtnaryHTMX](https://github.com/sliemeobn/elementary-htmx)
-- Add support for [WebAwesome](https://webawesom.com)
-- Include other potential HTML only or HTML+JS libraries
+- [x] Add library for all current shoelace components
+  - [ ] Implement custom properties
+- [ ] Create custom components (Paginator, DataTable, DataTableFilter) using Elementary and [ElemtnaryHTMX](https://github.com/sliemeobn/elementary-htmx)
+- [ ] Add support for [WebAwesome](https://webawesom.com)
+- [ ] Include other potential HTML only or HTML+JS libraries
