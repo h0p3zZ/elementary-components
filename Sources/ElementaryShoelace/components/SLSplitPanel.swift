@@ -1,17 +1,17 @@
 import Elementary
 
 public extension HTMLTag {
-    enum SLSPlitPanel: HTMLTrait.Shoelace {
+    enum SLSplitPanel: HTMLTrait.Shoelace {
         public static let name = "sl-split-panel"
     }
 }
 
-public typealias SLSPlitPanel<Content: HTML> = HTMLElement<HTMLTag.SLSPlitPanel, Content>
+public typealias SLSplitPanel<Content: HTML> = HTMLElement<HTMLTag.SLSplitPanel, Content>
 
 // Should contain all the attributes defined on Shoelace's SLSPlitPanel component
 // - that can be rendered on the server side and are not only getters
 // - for further info see https://shoelace.style/components/split-panel
-public extension HTMLAttribute where Tag == HTMLTag.SLSPlitPanel {
+public extension HTMLAttribute where Tag == HTMLTag.SLSplitPanel {
     /// The current position of the divider from the primary panel’s edge as a percentage 0–100. Defaults to 50% of the container’s initial size.
     /// - Parameter percentage: The percentage value (0-100).
     /// - Returns: The HTMLAttribute (`position="(percentage)"`)
@@ -59,4 +59,4 @@ public extension HTMLAttribute where Tag == HTMLTag.SLSPlitPanel {
     }
 }
 
-extension HTMLTag.SLSPlitPanel: HTMLTrait.Attributes.disabled {}
+extension HTMLTag.SLSplitPanel: HTMLTrait.Attributes.disabled {}

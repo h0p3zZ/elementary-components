@@ -14,7 +14,7 @@ public extension HTMLAttribute where Tag: HTMLTrait.Shoelace {
         let tailwind = tailwind.split(separator: " ").map { s in
             "[&::part(\(part))]:\(s)"
         }.joined(separator: " ")
-        return HTMLAttribute(name: "tailwind", value: tailwind, mergedBy: .appending(seperatedBy: " "))
+        return HTMLAttribute(name: "tailwind", value: tailwind, mergedBy: .appending(separatedBy: " "))
     }
 }
 
@@ -354,6 +354,16 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.autocorrect {
 
     static func autocorrect(_ value: AutocorrectValue) -> Self {
         HTMLAttribute(name: "autocorrect", value: value.rawValue)
+    }
+}
+
+public extension HTMLTrait.Attributes {
+    protocol autofocus {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.autofocus {
+    static var autofocus: Self {
+        HTMLAttribute(name: "autofocus", value: nil)
     }
 }
 

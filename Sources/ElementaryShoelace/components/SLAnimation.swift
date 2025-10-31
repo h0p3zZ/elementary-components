@@ -138,7 +138,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLAnimation {
     /// - Parameter direction: The direction of the animation (`normal`, `reverse`, `alternate`, `alternate-reverse`)
     /// - Returns: The HTMLAttribute (`direction="(value, ...)"`)
     static func direction (_ direction: SLAnimationPlaybackDirection...) -> Self {
-        .init(name: "direction", value: direction.map(\.rawValue).joined(separator: ","), mergedBy: .appending(seperatedBy: ","))
+        .init(name: "direction", value: direction.map(\.rawValue).joined(separator: ","), mergedBy: .appending(separatedBy: ","))
     }
 
     /// The number of milliseconds each iteration of the animation takes to complete. Default `1000`.
@@ -212,7 +212,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLAnimation {
 
     /// - Returns: The HTMLAttribute (`fill="(value, ...)"`)	
     static func fill (_ fill: SLAnimationFillMode...) -> Self {
-        .init(name: "fill", value: fill.map(\.rawValue).joined(separator: ","), mergedBy: .appending(seperatedBy: ","))
+        .init(name: "fill", value: fill.map(\.rawValue).joined(separator: ","), mergedBy: .appending(separatedBy: ","))
     }
 
     /// The number of times the animation should repeat. Default `Infinity`.
