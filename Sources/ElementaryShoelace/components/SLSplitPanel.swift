@@ -8,7 +8,7 @@ public extension HTMLTag {
 
 public typealias SLSplitPanel<Content: HTML> = HTMLElement<HTMLTag.SLSplitPanel, Content>
 
-// Should contain all the attributes defined on Shoelace's SLSPlitPanel component
+// Should contain all the attributes defined on Shoelace's SLSplitPanel component
 // - that can be rendered on the server side and are not only getters
 // - for further info see https://shoelace.style/components/split-panel
 public extension HTMLAttribute where Tag == HTMLTag.SLSplitPanel {
@@ -34,7 +34,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLSplitPanel {
     enum SLSplitPanelPrimaryValue: String {
         case start
         case end
-        case unedfined
+        case undefined
     }
 
     /// If no primary panel is designated, both panels will resize proportionally when the host element is resized. If a primary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the host element is resized.

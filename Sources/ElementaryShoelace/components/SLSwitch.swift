@@ -10,7 +10,7 @@ public typealias SLSwitch<Content: HTML> = HTMLElement<HTMLTag.SLSwitch, Content
 
 // Should contain all the attributes defined on Shoelace's SLSwitch component
 // - that can be rendered on the server side and are not only getters
-// - for further info see https://shoelace.style/components/swtich
+// - for further info see https://shoelace.style/components/switch
 public extension HTMLAttribute where Tag == HTMLTag.SLSwitch {
     /// The default value of the form control. Primarily used for resetting the form control. (Default `false`)
     static var defaultChecked : Self {
