@@ -49,7 +49,7 @@ public extension HTMLAttribute where Tag == HTMLTag.SLButton {
 
     enum SLButtonTypeValue: String {
         case button
-        case subnmit
+        case submit
         case reset
     }
 
