@@ -8,11 +8,11 @@ public extension HTMLTag {
 
 public typealias SLSPlitPanel<Content: HTML> = HTMLElement<HTMLTag.SLSPlitPanel, Content>
 
-// Should contain all the attributes defined on Shoelace's SLSkeleton component
+// Should contain all the attributes defined on Shoelace's SLSPlitPanel component
 // - that can be rendered on the server side and are not only getters
-// - for further info see https://shoelace.style/components/skeleton
+// - for further info see https://shoelace.style/components/split-panel
 public extension HTMLAttribute where Tag == HTMLTag.SLSPlitPanel {
-    /// 	The current position of the divider from the primary panel’s edge as a percentage 0–100. Defaults to 50% of the container’s initial size.
+    /// The current position of the divider from the primary panel’s edge as a percentage 0–100. Defaults to 50% of the container’s initial size.
     /// - Parameter percentage: The percentage value (0-100).
     /// - Returns: The HTMLAttribute (`position="(percentage)"`)
     static func position(_ percentage: Int) -> Self {
