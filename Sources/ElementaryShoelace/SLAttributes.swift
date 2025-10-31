@@ -70,7 +70,7 @@ public extension HTMLTrait.Attributes.shoelace {
 }
 
 public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.filled {
-    /// Makes the component appear disabled. Default `false`.
+    /// Makes the component appear filled. Default `false`.
     static var filled: Self {
         HTMLAttribute(name: "filled", value: nil)
     }
