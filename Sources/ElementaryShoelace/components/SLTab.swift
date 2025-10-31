@@ -19,11 +19,6 @@ public extension HTMLAttribute where Tag == HTMLTag.SLTab {
         HTMLAttribute(name: "panel", value: value)
     }
 
-    /// Draws the tab in an active state. Defaults to `false`.
-    static var active: Self {
-        HTMLAttribute(name: "active", value: nil)
-    }
-
     /// Makes the tab closable and shows a close button. Defaults to `false`.
     static var closable: Self {
         HTMLAttribute(name: "closable", value: nil)
@@ -31,3 +26,4 @@ public extension HTMLAttribute where Tag == HTMLTag.SLTab {
 }
 
 extension HTMLTag.SLTab: HTMLTrait.Attributes.disabled {}
+extension HTMLTag.SLTab: HTMLTrait.Attributes.shoelace.active {}

@@ -42,6 +42,18 @@ public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.size {
 }
 
 public extension HTMLTrait.Attributes.shoelace {
+    protocol active {}
+}
+
+public extension HTMLAttribute where Tag: HTMLTrait.Attributes.shoelace.active {
+    /// Sets the component to its active state. Default `false`.
+    /// - Returns: The HTMLAttribute (`active`)
+    static var active: Self {
+        HTMLAttribute(name: "active", value: nil)
+    }
+}
+
+public extension HTMLTrait.Attributes.shoelace {
     protocol clearable {}
 }
 

@@ -26,12 +26,6 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
         .init(name: "anchor", value: id)
     }
 
-    /// Activates the positioning logic and shows the popup. When this attribute is removed, the positioning logic is torn down and the popup will be hidden.
-    /// - Returns: The HTMLAttribute (`active`)
-    static var active: Self { 
-        .init(name: "active", value: "")
-    }
-
     enum SLPopupPlacemetValue: String {
         case top
         case topStart = "top-start"
@@ -211,3 +205,5 @@ public extension HTMLAttribute where Tag == HTMLTag.SLPopup {
         .init(name: "hover-bridge", value: nil)
     }
 }
+
+extension HTMLTag.SLPopup: HTMLTrait.Attributes.shoelace.active {}
