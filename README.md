@@ -1,6 +1,9 @@
 # Elementary Component Library
 > For more information on Elementary click [here](https://github.com/sliemeobn/elementary)
 
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fh0p3zZ%2Felementary-components%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/h0p3zZ/elementary-components)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fh0p3zZ%2Felementary-components%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/h0p3zZ/elementary-components)
+
 **Combines component libraries for HTML rendering in Swift**
 
 [Libraries](#libraries) | [Motivation](#motivation) | [Discussion](https://github.com/h0p3zZ/elementary-components/discussions)
@@ -9,7 +12,7 @@
 
 Add the dependency to `Package.swift`
 ```swift
-.package(url: "https://github.com/h0p3zZ/elementary-components.git", from: "0.0.1")
+.package(url: "https://github.com/h0p3zZ/elementary-components.git", from: "1.0.0")
 ```
 
 ## Libraries
@@ -20,7 +23,7 @@ Add the dependency to `Package.swift`
 ### [Shoelace](https://shoelace.style)
 
 ```swift
-.product(name: "ElementarySheolace", package: "elementary-shoelace")
+.product(name: "ElementaryShoelace", package: "elementary-components")
 ```
 
 **🚧 Under Construction 🚧**
