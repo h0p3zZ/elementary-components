@@ -9,16 +9,16 @@ let package = Package(
         .library(
             name: "ElementaryShoelace",
             targets: ["ElementaryShoelace"]
-        ),
+        )
     ],
     dependencies: [
-        .package(url: "https://github.com/sliemeobn/elementary.git", from: "0.5.5"),
+        .package(url: "https://github.com/elementary-swift/elementary.git", from: "0.6.0")
     ],
     targets: [
         .target(
             name: "ElementaryShoelace",
             dependencies: [
-                .product(name: "Elementary", package: "elementary"),
+                .product(name: "Elementary", package: "elementary")
             ]
         ),
         .testTarget(

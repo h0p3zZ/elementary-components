@@ -1,7 +1,7 @@
 import Elementary
 
-public extension HTMLTag {
-    enum SLRadioButton: HTMLTrait.Shoelace {
+extension HTMLTag {
+    public enum SLRadioButton: HTMLTrait.Shoelace {
         public static let name = "sl-radio-button"
     }
 }
